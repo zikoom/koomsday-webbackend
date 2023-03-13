@@ -1,0 +1,16 @@
+{
+  "name": "koomsday-webbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zikoom/koomsday-webbackend.git",
+  "author": "Yoon Ji Hoon <hunmonhun@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.14.1",
+    "koa-router": "^12.0.0"
+  },
+  "scripts": {
+    "start": "node src",
+    "start:dev": "nodemon --watch src/ src/index.js"
+  }
+}
