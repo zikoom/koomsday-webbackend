@@ -15,6 +15,6 @@ app.use(ctx => {
   ctx.body = 'Hello Koa';
 });
 
-app.listen(4000, () => {
-  console.log('herum server is listening to port 4000');
+app.listen(3000, () => {
+  console.log('herum server is listening to port 3000');
 })
