@@ -30,3 +30,7 @@ app.use(bodyParser()).use(router.routes());
 app.listen(3000, () => {
   console.log('herum server is listening to port 3000');
 })
+
+
+const v = require('../js/oauth')
+console.log(v);
