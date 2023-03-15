@@ -20,9 +20,9 @@ router.get('/api/users', ctx => {
   ctx.body = {ok: true, users: tempData.users}
 })
 
-app.use(ctx => {
-  ctx.body = 'hahaha!'
-})
+// app.use(ctx => {
+//   ctx.body = 'hahaha!'
+// })
 
 app.use(bodyParser()).use(router.routes());
 
