@@ -1,3 +1,9 @@
+/**
+ * koomsday webbackend 서버
+ * wwww.koomsday.com/api 로 가는 요청을 이 서버가 처리함
+ */
+
+
 const Koa = require('koa');
 const Router = require('@koa/router')
 const bodyParser = require('koa-bodyparser')
@@ -20,9 +26,6 @@ router.get('/api/users', ctx => {
   ctx.body = {ok: true, users: tempData.users}
 })
 
-// app.use(ctx => {
-//   ctx.body = 'hahaha!'
-// })
 
 app.use(bodyParser()).use(router.routes());
 
@@ -33,4 +36,3 @@ app.listen(3000, () => {
 
 
 const v = require('../js/oauth')
-console.log(v);
