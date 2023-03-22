@@ -6,20 +6,12 @@ const readJson = require('../util/jsonReader')
 const root = global._ROOT_PATH.toString();
 const {MEMBER_SERVER_PATH} = readJson(root + '\\config.json')
 
-console.log('MEMBER_SERVER_PATH: ', MEMBER_SERVER_PATH);
+const axios = require('axios')
 
-
-const getOauthURL = async () => {
-  return new Promise((resovle) => {
-    setTimeout(() => {
-      resovle('https://www.naver.com');
-    }, 1000);
-  })
-}
 
 router.get('/googleOauthURL', async (ctx) => {
-  const URL = await getOauthURL();
-  ctx.response.redirect(URL);
+  const res = await axios.get(MEMBER_SERVER_PATH + '/member/auth/googleOauthURL')
+  ctx.response.redirect(res.data.url);
 })
 
 module.exports = router;
