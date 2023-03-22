@@ -22,8 +22,11 @@ const app = new Koa();
 const router = new Router();
 const cors = require('@koa/cors')
 
+const option = {
+  origin: '*'
+}
 
-app.use(cors());
+app.use(cors(option));
 
 
 const globalRouter = require('../router/index');
