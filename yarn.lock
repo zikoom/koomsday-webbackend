@@ -34,6 +34,11 @@
   dependencies:
     "debug" "4"
 
+"app-root-path@^3.1.0":
+  "integrity" "sha512-biN3PwB2gUtjaYy/isrU3aNWI5w+fAfvHkSvCKeQGxhmYpwKFUxudR3Yya+KqVRHBmEDYh+/lTozYCFbmzX4nA=="
+  "resolved" "https://registry.npmjs.org/app-root-path/-/app-root-path-3.1.0.tgz"
+  "version" "3.1.0"
+
 "arrify@^2.0.0":
   "integrity" "sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug=="
   "resolved" "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz"
