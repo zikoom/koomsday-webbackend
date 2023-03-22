@@ -4,7 +4,7 @@ const router = new Router();
 const readJson = require('../util/jsonReader')
 
 const root = global._ROOT_PATH.toString();
-const {MEMBER_SERVER_PATH} = readJson(root + '\\config.json')
+const {MEMBER_SERVER_PATH} = readJson('../config.json')
 
 const axios = require('axios')
 
