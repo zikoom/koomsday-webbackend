@@ -6,6 +6,7 @@
 
 // 전역 유틸 //
 global._ROOT_PATH = require('app-root-path')
+global._logger = require('../config/winston')
 
 
 //
@@ -21,12 +22,14 @@ const app = new Koa();
 const router = new Router();
 const cors = require('@koa/cors')
 
+
 app.use(cors());
+
 
 const globalRouter = require('../router/index');
 
 router.use(rootPath, globalRouter.routes());
-
+app.use(cors());
 
 app.use(bodyParser()).use(router.routes());
 

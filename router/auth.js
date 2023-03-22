@@ -11,7 +11,11 @@ const axios = require('axios')
 
 router.get('/googleOauthURL', async (ctx) => {
   const res = await axios.get(MEMBER_SERVER_PATH + '/member/auth/googleOauthURL')
-  ctx.response.redirect(res.data.url);
+  ctx.response.status = 202;
+  ctx.body = {
+    url: res.data.url
+  };
+  global._logger.info('/googleOauthURL')
 })
 
 module.exports = router;
