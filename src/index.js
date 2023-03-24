@@ -8,6 +8,7 @@
 global._ROOT_PATH = require('app-root-path')
 global._logger = require('../config/winston')
 
+const path = require('path');
 
 //
 

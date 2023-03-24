@@ -1,12 +1,14 @@
 const Router = require('@koa/router');
 const router = new Router();
 
-const readJson = require('../util/jsonReader')
-
 const root = global._ROOT_PATH.toString();
-const {MEMBER_SERVER_PATH} = readJson('../config.json')
+const path = require('path');
+const readJson = require(path.resolve(__dirname, '../', 'util', 'jsonReader.js'))
+const {MEMBER_SERVER_PATH} = readJson(path.resolve(__dirname, '../', 'config.json'));
 
 const axios = require('axios')
+
+
 
 
 router.get('/googleOauthURL', async (ctx) => {
