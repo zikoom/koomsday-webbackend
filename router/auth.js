@@ -17,7 +17,7 @@ router.get('/googleOauthURL', async (ctx) => {
   // ctx.body = {
   //   url: res.data.url
   // };
-  ctx.body = '/googleOauthURL';
+  ctx.body = `/googleOauthURL. MEMBER_SERVER_PATH: ${MEMBER_SERVER_PATH}`;
   global._logger.info('/googleOauthURL')
 })
 
