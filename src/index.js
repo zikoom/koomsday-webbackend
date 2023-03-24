@@ -33,6 +33,9 @@ app.use(cors(option));
 const globalRouter = require('../router/index');
 
 router.use(rootPath, globalRouter.routes());
+router.get(rootPath + '/' , (ctx => {
+  ctx.body = '루트'
+})
 app.use(cors());
 
 app.use(bodyParser()).use(router.routes());
