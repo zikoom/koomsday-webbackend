@@ -21,4 +21,23 @@ router.get('/googleOauthURL', async (ctx) => {
   global._logger.info('/googleOauthURL')
 })
 
+
+
+
+router.post('/userinfo', async (ctx) => {
+  global._logger.info('post /userinfo');
+
+  const {authCode} = ctx.request.body;
+  if (!authCode) throw new Error('unvalid authCode')
+  try {
+    const res = await axios.post(MEMBER_SERVER_PATH + '/member/auth/userinfo', {
+      authCode: authCode
+    })
+    ctx.body = res.data
+  } catch (error) {
+    ctx.response.status = 403;
+  }
+
+})
+
 module.exports = router;
